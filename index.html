@@ -26,7 +26,6 @@
       line-height: 1.7;
     }
 
-    /* NAV */
     nav {
       position: sticky; top: 0; z-index: 100;
       background: rgba(255,255,255,0.95);
@@ -54,13 +53,11 @@
       color: var(--navy); background: var(--navy-light);
     }
 
-    /* LAYOUT */
     .wrap {
       max-width: 780px; margin: 0 auto;
       padding: 64px 32px 100px;
     }
 
-    /* HERO */
     .hero {
       display: flex; gap: 48px;
       align-items: flex-start;
@@ -102,7 +99,6 @@
     }
     .links a:hover { background: #d6e4f0; }
 
-    /* PHOTO */
     .hero-photo {
       flex-shrink: 0; width: 148px; height: 148px;
       border-radius: 10px; overflow: hidden;
@@ -111,11 +107,7 @@
       display: flex; align-items: center; justify-content: center;
     }
     .hero-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
-    .hero-photo .no-photo {
-      opacity: 0.25; color: var(--navy);
-    }
 
-    /* SECTION */
     section { margin-bottom: 64px; }
     .sh {
       display: flex; align-items: center; gap: 14px;
@@ -128,7 +120,6 @@
     }
     .sh-line { flex: 1; height: 1px; background: var(--border); }
 
-    /* PUBLICATIONS */
     .pub {
       padding: 18px 0; border-bottom: 1px solid var(--border);
       display: grid; grid-template-columns: 22px 1fr; gap: 14px;
@@ -154,9 +145,7 @@
       letter-spacing: 0.06em; text-transform: uppercase;
       color: #9ca3af; padding-top: 6px;
     }
-    .pub:first-child .year-row { border-top: none; }
 
-    /* AWARDS */
     .award {
       display: flex; gap: 20px; padding: 13px 0;
       border-bottom: 1px solid var(--border); align-items: baseline;
@@ -166,36 +155,6 @@
     .award-name { font-size: 14px; font-weight: 500; }
     .award-sub { font-size: 13px; color: var(--muted); margin-top: 1px; }
 
-    /* EDU */
-    .edu {
-      display: flex; gap: 24px; padding: 16px 0;
-      border-bottom: 1px solid var(--border);
-    }
-    .edu:first-child { border-top: 1px solid var(--border); }
-    .edu-y { flex-shrink: 0; width: 130px; font-size: 13px; color: var(--muted); padding-top: 2px; }
-    .edu-role { font-size: 14.5px; font-weight: 500; margin-bottom: 2px; }
-    .edu-place { font-size: 13.5px; color: var(--muted); }
-    .edu-note { font-size: 12.5px; color: var(--navy); margin-top: 3px; }
-
-    /* CV LINK BOX */
-    .cv-box {
-      margin-top: 28px; padding: 20px 24px;
-      border: 1px solid var(--border); border-radius: 8px;
-      display: flex; align-items: center; justify-content: space-between;
-      gap: 16px;
-    }
-    .cv-box p { font-size: 14px; color: var(--muted); }
-    .cv-box a {
-      display: inline-flex; align-items: center; gap: 6px;
-      font-size: 13px; font-weight: 500;
-      color: var(--navy); background: var(--navy-light);
-      border: 1px solid #c5d5e8; padding: 7px 16px;
-      border-radius: 6px; text-decoration: none;
-      white-space: nowrap; transition: background 0.15s;
-    }
-    .cv-box a:hover { background: #d6e4f0; }
-
-    /* CONTACT */
     .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
     .cc {
       background: #fff; border: 1px solid var(--border);
@@ -221,7 +180,6 @@
       .contact-grid { grid-template-columns: 1fr; }
       .wrap { padding: 48px 20px 80px; }
       .nav-inner { padding: 0 20px; }
-      .cv-box { flex-direction: column; align-items: flex-start; }
     }
   </style>
 </head>
@@ -285,9 +243,8 @@
     </div>
 
     <div class="hero-photo">
-      <!-- 사진 있으면 아래 주석 해제하고 파일명 수정 -->
-      <img src="files/photo.jpg" alt="Jiye Kim">
-      <svg class="no-photo" width="56" height="56" viewBox="0 0 24 24" fill="currentColor">
+      <!-- 사진 올리면 주석 해제: <img src="files/photo.jpg" alt="Jiye Kim"> -->
+      <svg width="56" height="56" viewBox="0 0 24 24" fill="#1a2e4a" opacity="0.2">
         <path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/>
       </svg>
     </div>
@@ -297,7 +254,6 @@
   <section id="publications">
     <div class="sh"><h2>Publications</h2><div class="sh-line"></div></div>
     <div>
-
       <div class="pub"><div class="year-row">2025</div></div>
 
       <div class="pub">
@@ -361,7 +317,6 @@
           <div class="pub-links"><a href="#">Paper</a></div>
         </div>
       </div>
-
     </div>
   </section>
 

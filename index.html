@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jiye Kim</title>
   <meta name="description" content="Jiye Kim — Ph.D. Candidate, Seoul National University. MRI, QSM, Deep Learning.">
-  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,300;0,400;1,300&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
   <style>
     :root {
       --navy: #1a2e4a;
@@ -15,11 +14,12 @@
       --border: #e5e7eb;
       --bg: #ffffff;
     }
+
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
 
     body {
-      font-family: 'DM Sans', sans-serif;
+      font-family: Arial, Helvetica, sans-serif;
       background: var(--bg);
       color: var(--text);
       font-size: 15px;
@@ -34,6 +34,7 @@
       backdrop-filter: blur(8px);
       border-bottom: 1px solid var(--border);
     }
+
     .nav-inner {
       max-width: 780px;
       margin: 0 auto;
@@ -43,14 +44,16 @@
       align-items: center;
       gap: 2px;
     }
+
     .nav-logo {
-      font-family: 'Source Serif 4', serif;
+      font-family: Georgia, "Times New Roman", serif;
       font-size: 17px;
       font-weight: 400;
       color: var(--text);
       text-decoration: none;
       margin-right: auto;
     }
+
     nav a.nl {
       font-size: 13.5px;
       color: var(--muted);
@@ -59,6 +62,7 @@
       border-radius: 5px;
       transition: color 0.15s, background 0.15s;
     }
+
     nav a.nl:hover,
     nav a.nl.active {
       color: var(--navy);
@@ -74,36 +78,44 @@
     .hero {
       display: flex;
       gap: 48px;
-      align-items: flex-start;
+      align-items: center;
       margin-bottom: 72px;
     }
-    .hero-text { flex: 1; }
+
+    .hero-text {
+      flex: 1;
+    }
+
     .hero-name {
-      font-family: 'Source Serif 4', serif;
+      font-family: Georgia, "Times New Roman", serif;
       font-size: 42px;
-      font-weight: 300;
-      letter-spacing: -0.02em;
+      font-weight: 400;
+      letter-spacing: -0.01em;
       line-height: 1.1;
       margin-bottom: 6px;
     }
+
     .hero-sub {
       font-size: 13px;
       color: var(--muted);
-      font-weight: 300;
+      font-weight: 400;
       letter-spacing: 0.05em;
       text-transform: uppercase;
       margin-bottom: 22px;
     }
+
     .hero-bio p {
       color: #374151;
       font-size: 14.5px;
       margin-bottom: 13px;
       max-width: 500px;
     }
+
     .hero-bio a {
       color: var(--navy);
       text-decoration: none;
     }
+
     .hero-bio a:hover {
       text-decoration: underline;
     }
@@ -114,6 +126,7 @@
       gap: 6px;
       margin-top: 18px;
     }
+
     .tag {
       font-size: 12px;
       padding: 3px 11px;
@@ -129,6 +142,7 @@
       gap: 8px;
       margin-top: 24px;
     }
+
     .links a {
       display: inline-flex;
       align-items: center;
@@ -143,15 +157,16 @@
       text-decoration: none;
       transition: background 0.15s;
     }
+
     .links a:hover {
       background: #d6e4f0;
     }
 
     .hero-photo {
       flex-shrink: 0;
-      width: 148px;
-      height: 148px;
-      border-radius: 10px;
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
       overflow: hidden;
       border: 1px solid var(--border);
       background: var(--navy-light);
@@ -159,6 +174,7 @@
       align-items: center;
       justify-content: center;
     }
+
     .hero-photo img {
       width: 100%;
       height: 100%;
@@ -166,20 +182,25 @@
       display: block;
     }
 
-    section { margin-bottom: 64px; }
+    section {
+      margin-bottom: 64px;
+    }
+
     .sh {
       display: flex;
       align-items: center;
       gap: 14px;
       margin-bottom: 28px;
     }
+
     h2 {
-      font-family: 'Source Serif 4', serif;
+      font-family: Georgia, "Times New Roman", serif;
       font-size: 22px;
       font-weight: 400;
       white-space: nowrap;
       letter-spacing: -0.01em;
     }
+
     .sh-line {
       flex: 1;
       height: 1px;
@@ -193,44 +214,56 @@
       grid-template-columns: 22px 1fr;
       gap: 14px;
     }
-    .pub:first-child { border-top: 1px solid var(--border); }
+
+    .pub:first-child {
+      border-top: 1px solid var(--border);
+    }
+
     .pub-n {
       font-size: 12px;
       color: #9ca3af;
       padding-top: 3px;
     }
+
     .pub-title {
       font-size: 14.5px;
-      font-weight: 500;
+      font-weight: 600;
       margin-bottom: 4px;
       line-height: 1.45;
     }
+
     .pub-title a {
       color: var(--text);
       text-decoration: none;
     }
+
     .pub-title a:hover {
       color: var(--navy);
     }
+
     .pub-authors {
       font-size: 13px;
       color: var(--muted);
       margin-bottom: 3px;
     }
+
     .pub-authors strong {
       color: var(--text);
-      font-weight: 500;
+      font-weight: 600;
     }
+
     .pub-venue {
       font-size: 13px;
       color: var(--muted);
       margin-bottom: 8px;
     }
+
     .venue {
-      font-weight: 600;
+      font-weight: 700;
       color: var(--navy);
       font-style: normal;
     }
+
     .pub-links a {
       font-size: 12px;
       color: var(--muted);
@@ -241,14 +274,16 @@
       margin-right: 5px;
       transition: color 0.15s, border-color 0.15s;
     }
+
     .pub-links a:hover {
       color: var(--navy);
       border-color: #c5d5e8;
     }
+
     .year-row {
       grid-column: 1 / -1;
       font-size: 11.5px;
-      font-weight: 500;
+      font-weight: 700;
       letter-spacing: 0.06em;
       text-transform: uppercase;
       color: #9ca3af;
@@ -262,17 +297,23 @@
       border-bottom: 1px solid var(--border);
       align-items: baseline;
     }
-    .award:first-child { border-top: 1px solid var(--border); }
+
+    .award:first-child {
+      border-top: 1px solid var(--border);
+    }
+
     .award-y {
       flex-shrink: 0;
       width: 60px;
       font-size: 12px;
       color: #9ca3af;
     }
+
     .award-name {
       font-size: 14px;
-      font-weight: 500;
+      font-weight: 600;
     }
+
     .award-sub {
       font-size: 13px;
       color: var(--muted);
@@ -284,27 +325,32 @@
       grid-template-columns: 1fr 1fr;
       gap: 10px;
     }
+
     .cc {
       background: #fff;
       border: 1px solid var(--border);
       border-radius: 8px;
       padding: 16px 20px;
     }
+
     .cc-label {
       font-size: 11px;
-      font-weight: 500;
+      font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.08em;
       color: #9ca3af;
       margin-bottom: 5px;
     }
+
     .cc-val {
       font-size: 14px;
     }
+
     .cc-val a {
       color: var(--navy);
       text-decoration: none;
     }
+
     .cc-val a:hover {
       text-decoration: underline;
     }
@@ -322,21 +368,28 @@
         flex-direction: column-reverse;
         gap: 24px;
       }
+
       .hero-photo {
-        width: 96px;
-        height: 96px;
+        width: 110px;
+        height: 110px;
       }
+
       .hero-name {
         font-size: 32px;
       }
+
       .contact-grid {
         grid-template-columns: 1fr;
       }
+
       .wrap {
         padding: 48px 20px 80px;
       }
+
       .nav-inner {
         padding: 0 20px;
+        overflow-x: auto;
+        white-space: nowrap;
       }
     }
   </style>
@@ -349,7 +402,7 @@
     <a href="#about" class="nl active">About</a>
     <a href="#publications" class="nl">Publications</a>
     <a href="#awards" class="nl">Awards</a>
-    <a href="cv.html" class="nl">CV</a>
+    <a href="files/CV_JiyeKim.pdf" class="nl" target="_blank" rel="noopener noreferrer">CV</a>
     <a href="#contact" class="nl">Contact</a>
   </div>
 </nav>
@@ -359,7 +412,8 @@
   <div class="hero" id="about">
     <div class="hero-text">
       <p class="hero-name">Jiye Kim</p>
-      <p class="hero-sub">Ph.D. Candidate &nbsp;·&nbsp; Seoul National University</p>
+      <p class="hero-sub">Ph.D. Candidate · Seoul National University</p>
+
       <div class="hero-bio">
         <p>
           I am a Ph.D. candidate in the
@@ -394,6 +448,7 @@
           </svg>
           Email
         </a>
+
         <a href="https://scholar.google.com/citations?user=6HlxVcsAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">
           <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
@@ -401,7 +456,8 @@
           </svg>
           Google Scholar
         </a>
-        <a href="cv.html">
+
+        <a href="files/CV_JiyeKim.pdf" target="_blank" rel="noopener noreferrer">
           <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
             <polyline points="14 2 14 8 20 8"></polyline>
@@ -422,6 +478,7 @@
       <div class="sh-line"></div>
     </div>
     <div>
+
       <div class="pub"><div class="year-row">2025</div></div>
 
       <div class="pub">
@@ -485,6 +542,7 @@
           <div class="pub-links"><a href="#">Paper</a></div>
         </div>
       </div>
+
     </div>
   </section>
 
@@ -574,7 +632,7 @@
 </div>
 
 <footer>
-  <p>Jiye Kim &nbsp;·&nbsp; Seoul National University &nbsp;·&nbsp; Updated April 2026</p>
+  <p>Jiye Kim · Seoul National University · Updated April 2026</p>
 </footer>
 
 <script>
@@ -583,6 +641,7 @@
 
   window.addEventListener('scroll', () => {
     let cur = 'about';
+
     ids.forEach(id => {
       const el = document.getElementById(id);
       if (el && window.scrollY >= el.offsetTop - 70) cur = id;
@@ -590,10 +649,12 @@
 
     links.forEach(a => {
       const href = a.getAttribute('href');
+
       if (!href.startsWith('#')) {
         a.classList.remove('active');
         return;
       }
+
       const h = href.replace('#', '');
       a.classList.toggle('active', h === cur);
     });

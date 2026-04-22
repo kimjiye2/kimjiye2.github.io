@@ -205,10 +205,13 @@
       grid-template-columns: minmax(260px, 360px) minmax(0, 1fr);
       gap: 28px;
       background: var(--card);
-      border: 1px solid rgba(214, 225, 236, 0.95);
-      border-radius: 16px;
-      padding: 26px;
+      padding: 24px 0;
+      border-bottom: 1px solid rgba(214, 225, 236, 0.95);
       align-items: stretch;
+    }
+
+    .pub-card:first-child {
+      border-top: 1px solid rgba(214, 225, 236, 0.95);
     }
 
     .pub-figure {
@@ -384,7 +387,7 @@
       }
 
       .pub-card {
-        padding: 18px;
+        padding: 18px 0;
       }
 
       .pub-figure {

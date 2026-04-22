@@ -17,9 +17,8 @@
       --text: #0f172a;
       --muted: #64748b;
       --border: #dbe4ee;
-      --bg: #f8fbff;
+      --bg: #ffffff;
       --card: #ffffff;
-      --shadow: 0 24px 60px rgba(15, 23, 42, 0.08);
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -27,11 +26,9 @@
 
     body {
       font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
-      background:
-        radial-gradient(circle at top left, rgba(59, 130, 246, 0.08), transparent 28%),
-        linear-gradient(180deg, #f9fbff 0%, #f5f8fc 100%);
+      background: var(--bg);
       color: var(--text);
-      font-size: 17px;
+      font-size: 16px;
       line-height: 1.8;
       letter-spacing: -0.015em;
     }
@@ -40,8 +37,7 @@
       position: sticky;
       top: 0;
       z-index: 100;
-      background: rgba(248, 251, 255, 0.92);
-      backdrop-filter: blur(14px);
+      background: rgba(255, 255, 255, 0.95);
       border-bottom: 1px solid rgba(219, 228, 238, 0.85);
     }
 
@@ -52,7 +48,7 @@
       height: 68px;
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 6px;
     }
 
     .nav-logo {
@@ -65,48 +61,47 @@
     }
 
     nav a.nl {
-      font-size: 15px;
+      font-size: 14px;
       color: var(--muted);
       text-decoration: none;
-      padding: 8px 14px;
-      border-radius: 999px;
-      transition: color 0.18s ease, background 0.18s ease, transform 0.18s ease;
+      padding: 8px 12px;
+      border-radius: 6px;
+      transition: color 0.18s ease, background 0.18s ease;
     }
 
     nav a.nl:hover,
     nav a.nl.active {
       color: var(--navy);
       background: var(--navy-soft);
-      transform: translateY(-1px);
     }
 
     .wrap {
       max-width: 1120px;
       margin: 0 auto;
-      padding: 80px 36px 120px;
+      padding: 72px 36px 120px;
     }
 
     .hero {
       display: grid;
-      grid-template-columns: minmax(0, 1.4fr) 300px;
-      gap: 72px;
+      grid-template-columns: minmax(0, 1fr) 220px;
+      gap: 48px;
       align-items: center;
-      margin-bottom: 96px;
+      margin-bottom: 88px;
     }
 
     .hero-name {
-      font-size: clamp(48px, 7vw, 68px);
-      font-weight: 800;
-      letter-spacing: -0.045em;
-      line-height: 0.98;
-      margin-bottom: 16px;
+      font-size: clamp(34px, 5vw, 48px);
+      font-weight: 700;
+      letter-spacing: -0.035em;
+      line-height: 1.05;
+      margin-bottom: 14px;
       color: var(--navy-deep);
     }
 
     .hero-sub {
-      font-size: 18px;
+      font-size: 16px;
       color: var(--muted);
-      margin-bottom: 28px;
+      margin-bottom: 22px;
     }
 
     .hero-sub a {
@@ -121,9 +116,9 @@
 
     .hero-bio p {
       color: #334155;
-      font-size: 18px;
+      font-size: 16px;
       margin-bottom: 16px;
-      max-width: 720px;
+      max-width: 700px;
     }
 
     .hero-bio a {
@@ -137,59 +132,33 @@
       color: #2563eb;
     }
 
-    .tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 26px;
-    }
-
-    .tag {
-      font-size: 13px;
-      padding: 6px 14px;
-      border-radius: 999px;
-      border: 1px solid #d6e1ec;
-      color: #3f5877;
-      background: rgba(255, 255, 255, 0.82);
-    }
-
     .links {
       display: flex;
       flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 30px;
+      gap: 14px;
+      margin-top: 10px;
     }
 
     .links a {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
       font-size: 14px;
-      font-weight: 600;
+      font-weight: 500;
       color: var(--navy);
-      background: #fff;
-      border: 1px solid #ccdae9;
-      padding: 9px 16px;
-      border-radius: 999px;
       text-decoration: none;
-      box-shadow: 0 8px 20px rgba(24, 49, 83, 0.06);
-      transition: transform 0.18s ease, border-color 0.18s ease, background 0.18s ease;
+      transition: color 0.18s ease;
     }
 
     .links a:hover {
-      transform: translateY(-2px);
-      border-color: #9db7d4;
-      background: #f7fbff;
+      color: #2563eb;
+      text-decoration: underline;
     }
 
     .hero-photo {
-      width: 300px;
-      height: 300px;
-      border-radius: 32px;
+      width: 220px;
+      height: 220px;
+      border-radius: 20px;
       overflow: hidden;
       border: 1px solid rgba(219, 228, 238, 0.9);
-      background: linear-gradient(180deg, #eef4fb 0%, #dde8f5 100%);
-      box-shadow: var(--shadow);
+      background: #ffffff;
       justify-self: end;
     }
 
@@ -236,90 +205,34 @@
       gap: 28px;
       background: var(--card);
       border: 1px solid rgba(214, 225, 236, 0.95);
-      border-radius: 28px;
+      border-radius: 16px;
       padding: 26px;
-      box-shadow: var(--shadow);
       align-items: stretch;
     }
 
     .pub-figure {
-      position: relative;
       min-height: 220px;
-      border-radius: 22px;
+      border-radius: 12px;
       overflow: hidden;
-      padding: 18px;
-      color: #fff;
+      border: 1px solid rgba(214, 225, 236, 0.95);
+      background: #f8fafc;
+    }
+
+    .pub-figure img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .pub-figure--empty {
       display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      isolation: isolate;
-    }
-
-    .pub-figure::before,
-    .pub-figure::after {
-      content: "";
-      position: absolute;
-      border-radius: 999px;
-      opacity: 0.32;
-      filter: blur(2px);
-      z-index: -1;
-    }
-
-    .pub-figure::before {
-      width: 220px;
-      height: 220px;
-      top: -70px;
-      right: -50px;
-      background: rgba(255, 255, 255, 0.28);
-    }
-
-    .pub-figure::after {
-      width: 180px;
-      height: 180px;
-      bottom: -70px;
-      left: -40px;
-      background: rgba(255, 255, 255, 0.18);
-    }
-
-    .pub-card--chi7t .pub-figure {
-      background:
-        radial-gradient(circle at 30% 25%, rgba(255,255,255,0.28), transparent 20%),
-        linear-gradient(135deg, #15365e 0%, #2f6698 52%, #61a5c2 100%);
-    }
-
-    .pub-card--chisepnet .pub-figure {
-      background:
-        radial-gradient(circle at 75% 25%, rgba(255,255,255,0.24), transparent 22%),
-        linear-gradient(135deg, #123c43 0%, #1b6b74 48%, #56b3a2 100%);
-    }
-
-    .pub-card--deeprf .pub-figure {
-      background:
-        radial-gradient(circle at 72% 30%, rgba(255,255,255,0.2), transparent 22%),
-        linear-gradient(135deg, #31255f 0%, #4b3f8f 48%, #8e7dff 100%);
-    }
-
-    .figure-kicker {
-      font-size: 12px;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      opacity: 0.82;
-    }
-
-    .figure-title {
-      font-size: 28px;
-      font-weight: 800;
-      line-height: 1.05;
-      letter-spacing: -0.03em;
-      max-width: 240px;
-    }
-
-    .figure-caption {
-      font-size: 13px;
-      line-height: 1.55;
-      color: rgba(255, 255, 255, 0.88);
-      max-width: 250px;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      color: var(--muted);
+      font-size: 14px;
+      text-align: center;
     }
 
     .pub-meta {
@@ -380,12 +293,6 @@
       font-weight: 800;
     }
 
-    .pub-summary {
-      font-size: 16px;
-      color: #334155;
-      margin-bottom: 18px;
-    }
-
     .pub-links {
       display: flex;
       flex-wrap: wrap;
@@ -424,8 +331,8 @@
       gap: 20px;
       padding: 18px 20px;
       border: 1px solid rgba(214, 225, 236, 0.95);
-      border-radius: 20px;
-      background: rgba(255, 255, 255, 0.88);
+      border-radius: 12px;
+      background: #ffffff;
     }
 
     .award-y {
@@ -463,8 +370,8 @@
 
       .hero-photo {
         justify-self: start;
-        width: 220px;
-        height: 220px;
+        width: 180px;
+        height: 180px;
       }
 
       .pub-card {
@@ -487,12 +394,7 @@
         white-space: nowrap;
       }
 
-      .hero-name {
-        font-size: 42px;
-      }
-
-      .hero-bio p,
-      .pub-summary {
+      .hero-bio p {
         font-size: 16px;
       }
 
@@ -502,7 +404,6 @@
 
       .pub-card {
         padding: 18px;
-        border-radius: 22px;
       }
 
       .pub-figure {
@@ -540,54 +441,21 @@
       <p class="hero-sub"><a href="mailto:lool1015@snu.ac.kr">lool1015@snu.ac.kr</a></p>
 
       <div class="hero-bio">
+        <p>Welcome to my website.</p>
         <p>
           I am a Ph.D. candidate in the
           <a href="https://ece.snu.ac.kr/" target="_blank" rel="noopener noreferrer">Department of Electrical and Computer Engineering</a>
-          at Seoul National University,
-          advised by <a href="https://list.snu.ac.kr/" target="_blank" rel="noopener noreferrer">Prof. Jongho Lee</a>.
+          at Seoul National University, advised by <a href="https://list.snu.ac.kr/" target="_blank" rel="noopener noreferrer">Prof. Jongho Lee</a>.
         </p>
         <p>
-          My research focuses on quantitative MRI, particularly
-          <strong>Quantitative Susceptibility Mapping (QSM)</strong> and
-          <strong>Chi-separation</strong>, combined with deep learning for
-          high-resolution in-vivo brain imaging.
-          I am also interested in MRI physics and RF pulse design.
+          My research focuses on quantitative MRI and ultra-high field imaging, with particular interests in magnetic susceptibility, high-resolution imaging, and longitudinal reconstruction.
         </p>
-      </div>
-
-      <div class="tags">
-        <span class="tag">MRI</span>
-        <span class="tag">Quantitative Susceptibility Mapping</span>
-        <span class="tag">Chi-separation</span>
-        <span class="tag">Deep Learning</span>
-        <span class="tag">RF Pulse Design</span>
-        <span class="tag">Neuroimaging</span>
       </div>
 
       <div class="links">
-        <a href="mailto:lool1015@snu.ac.kr">
-          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <rect x="2" y="4" width="20" height="16" rx="2"></rect>
-            <path d="m22 7-10 7L2 7"></path>
-          </svg>
-          Email
-        </a>
-
-        <a href="https://scholar.google.com/citations?user=6HlxVcsAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">
-          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
-            <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
-          </svg>
-          Google Scholar
-        </a>
-
-        <a href="files/CV_JiyeKim.pdf" target="_blank" rel="noopener noreferrer">
-          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-            <polyline points="14 2 14 8 20 8"></polyline>
-          </svg>
-          CV
-        </a>
+        <a href="mailto:lool1015@snu.ac.kr">Email</a>
+        <a href="https://scholar.google.com/citations?user=6HlxVcsAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+        <a href="files/CV_JiyeKim.pdf" target="_blank" rel="noopener noreferrer">CV</a>
       </div>
     </div>
 
@@ -605,9 +473,7 @@
     <div class="selected-pubs">
       <article class="pub-card pub-card--chi7t">
         <div class="pub-figure">
-          <div class="figure-kicker">Representative Figure</div>
-          <div class="figure-title">7T<br>Chi-separation</div>
-          <div class="figure-caption">High-resolution in-vivo susceptibility source separation for detailed visualization of brain microstructure.</div>
+          <img src="files/in-vivo-high-res.jpg" alt="Representative figure for In-vivo high-resolution Chi-separation at 7T">
         </div>
 
         <div class="pub-content">
@@ -618,7 +484,6 @@
           <p class="pub-title">In-vivo high-resolution Chi-separation at 7T</p>
           <p class="pub-authors"><strong>J. Kim</strong>, M. Kim, S. Ji, K. Min, H. Jeong, H.-G. Shin, C. Oh, R. J. Fox, K. E. Sakaie, M. J. Lowe, S.-H. Oh, S. Straub, S.-G. Kim, and J. Lee</p>
           <p class="pub-venue"><span class="venue">NeuroImage</span>, 2025</p>
-          <p class="pub-summary">A deep-learning-powered 7T Chi-separation pipeline for resolving fine in-vivo brain structure with richer iron and myelin contrast.</p>
           <div class="pub-links">
             <a href="https://www.sciencedirect.com/science/article/pii/S105381192500062X" target="_blank" rel="noopener noreferrer">Paper Link</a>
           </div>
@@ -627,9 +492,7 @@
 
       <article class="pub-card pub-card--chisepnet">
         <div class="pub-figure">
-          <div class="figure-kicker">Representative Figure</div>
-          <div class="figure-title">Chi-sepnet</div>
-          <div class="figure-caption">Neural susceptibility source separation with improved image quality and reduced acquisition burden.</div>
+          <img src="files/x-sepnet.jpg" alt="Representative figure for Chi-sepnet">
         </div>
 
         <div class="pub-content">
@@ -640,7 +503,6 @@
           <p class="pub-title">Chi-sepnet: Deep neural network for magnetic susceptibility source separation</p>
           <p class="pub-authors">M. Kim, S. Ji, <strong>J. Kim</strong>, K. Min, H. Jeong, J. Youn, T. Kim, J. Jang, B. Bilgic, H.-G. Shin, and J. Lee</p>
           <p class="pub-venue"><span class="venue">Human Brain Mapping</span>, 2025</p>
-          <p class="pub-summary">A learning-based Chi-separation framework that reconstructs paramagnetic and diamagnetic maps with fewer artifacts and broader practical usability.</p>
           <div class="pub-links">
             <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11748151/" target="_blank" rel="noopener noreferrer">Paper Link</a>
           </div>
@@ -648,10 +510,8 @@
       </article>
 
       <article class="pub-card pub-card--deeprf">
-        <div class="pub-figure">
-          <div class="figure-kicker">Representative Figure</div>
-          <div class="figure-title">DeepRF<br>for MRI</div>
-          <div class="figure-caption">AI-driven RF waveform design that expands beyond expert-crafted pulse design heuristics.</div>
+        <div class="pub-figure pub-figure--empty">
+          <span>Representative figure</span>
         </div>
 
         <div class="pub-content">
@@ -662,9 +522,27 @@
           <p class="pub-title">Deep Reinforcement Learning-Designed Radiofrequency Waveform in MRI</p>
           <p class="pub-authors">D. Shin, Y. Kim, C. Oh, H. An, J. Park, <strong>J. Kim</strong>, and J. Lee</p>
           <p class="pub-venue"><span class="venue">Nature Machine Intelligence</span>, 2021</p>
-          <p class="pub-summary">An AI-powered RF pulse design framework showing how reinforcement learning can discover efficient waveform strategies in MRI.</p>
           <div class="pub-links">
             <a href="https://www.nature.com/articles/s42256-021-00411-1" target="_blank" rel="noopener noreferrer">Paper Link</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="pub-card">
+        <div class="pub-figure pub-figure--empty">
+          <span>Representative figure</span>
+        </div>
+
+        <div class="pub-content">
+          <div class="pub-meta">
+            <span class="pub-pill">2026</span>
+            <span class="pub-pill">Magnetic Resonance in Medicine</span>
+          </div>
+          <p class="pub-title">MIMOSA: Multi-parametric Imaging using Multiple-echoes with Optimized Simultaneous Acquisition for highly-efficient quantitative MRI</p>
+          <p class="pub-authors">Y. Chen, Y. Jun, A. Heydari, X. Yong, <strong>J. Kim</strong>, J. Lee, H. Liu, H. Ye, B. Gagoski, S. Fujita, and B. Bilgic</p>
+          <p class="pub-venue"><span class="venue">Magnetic Resonance in Medicine</span>, 2026</p>
+          <div class="pub-links">
+            <a href="https://doi.org/10.1002/mrm.70143" target="_blank" rel="noopener noreferrer">Paper Link</a>
           </div>
         </div>
       </article>

@@ -4,18 +4,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jiye Kim</title>
-  <meta name="description" content="Jiye Kim — Ph.D. Candidate, Seoul National University. MRI, QSM, Deep Learning.">
+  <meta name="description" content="Jiye Kim - Ph.D. Candidate, Seoul National University. MRI, QSM, Deep Learning.">
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretendard/dist/web/static/pretendard.css">
 
   <style>
     :root {
-      --navy: #1a2e4a;
-      --navy-light: #e8eef5;
-      --text: #111111;
-      --muted: #6b7280;
-      --border: #e5e7eb;
-      --bg: #ffffff;
+      --navy: #183153;
+      --navy-deep: #10233d;
+      --navy-soft: #edf3f9;
+      --sky: #3b82f6;
+      --text: #0f172a;
+      --muted: #64748b;
+      --border: #dbe4ee;
+      --bg: #f8fbff;
+      --card: #ffffff;
+      --shadow: 0 24px 60px rgba(15, 23, 42, 0.08);
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -23,90 +27,92 @@
 
     body {
       font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
-      background: var(--bg);
+      background:
+        radial-gradient(circle at top left, rgba(59, 130, 246, 0.08), transparent 28%),
+        linear-gradient(180deg, #f9fbff 0%, #f5f8fc 100%);
       color: var(--text);
-      font-size: 15px;
-      line-height: 1.7;
-      letter-spacing: -0.01em;
+      font-size: 17px;
+      line-height: 1.8;
+      letter-spacing: -0.015em;
     }
 
     nav {
       position: sticky;
       top: 0;
       z-index: 100;
-      background: rgba(255,255,255,0.95);
-      backdrop-filter: blur(8px);
-      border-bottom: 1px solid var(--border);
+      background: rgba(248, 251, 255, 0.92);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(219, 228, 238, 0.85);
     }
 
     .nav-inner {
-      max-width: 780px;
+      max-width: 1120px;
       margin: 0 auto;
-      padding: 0 32px;
-      height: 54px;
+      padding: 0 36px;
+      height: 68px;
       display: flex;
       align-items: center;
-      gap: 2px;
+      gap: 8px;
     }
 
     .nav-logo {
-      font-weight: 600;
-      font-size: 16px;
-      color: var(--text);
+      font-weight: 700;
+      font-size: 18px;
+      color: var(--navy-deep);
       text-decoration: none;
       margin-right: auto;
+      letter-spacing: -0.02em;
     }
 
     nav a.nl {
-      font-size: 13.5px;
+      font-size: 15px;
       color: var(--muted);
       text-decoration: none;
-      padding: 5px 13px;
-      border-radius: 5px;
-      transition: color 0.15s, background 0.15s;
+      padding: 8px 14px;
+      border-radius: 999px;
+      transition: color 0.18s ease, background 0.18s ease, transform 0.18s ease;
     }
 
     nav a.nl:hover,
     nav a.nl.active {
       color: var(--navy);
-      background: var(--navy-light);
+      background: var(--navy-soft);
+      transform: translateY(-1px);
     }
 
     .wrap {
-      max-width: 780px;
+      max-width: 1120px;
       margin: 0 auto;
-      padding: 64px 32px 100px;
+      padding: 80px 36px 120px;
     }
 
     .hero {
-      display: flex;
-      gap: 48px;
-      align-items: flex-start;
-      margin-bottom: 72px;
-    }
-
-    .hero-text {
-      flex: 1;
+      display: grid;
+      grid-template-columns: minmax(0, 1.4fr) 300px;
+      gap: 72px;
+      align-items: center;
+      margin-bottom: 96px;
     }
 
     .hero-name {
-      font-size: 42px;
-      font-weight: 700;
-      letter-spacing: -0.02em;
-      line-height: 1.1;
-      margin-bottom: 8px;
+      font-size: clamp(48px, 7vw, 68px);
+      font-weight: 800;
+      letter-spacing: -0.045em;
+      line-height: 0.98;
+      margin-bottom: 16px;
+      color: var(--navy-deep);
     }
 
     .hero-sub {
-      font-size: 14px;
+      font-size: 18px;
       color: var(--muted);
-      font-weight: 400;
-      margin-bottom: 22px;
+      margin-bottom: 28px;
     }
 
     .hero-sub a {
       color: var(--navy);
       text-decoration: none;
+      font-weight: 600;
     }
 
     .hero-sub a:hover {
@@ -114,75 +120,77 @@
     }
 
     .hero-bio p {
-      color: #374151;
-      font-size: 14.5px;
-      margin-bottom: 13px;
-      max-width: 500px;
+      color: #334155;
+      font-size: 18px;
+      margin-bottom: 16px;
+      max-width: 720px;
     }
 
     .hero-bio a {
-      color: var(--navy);
-      text-decoration: none;
+      color: var(--sky);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      font-weight: 600;
     }
 
     .hero-bio a:hover {
-      text-decoration: underline;
+      color: #2563eb;
     }
 
     .tags {
       display: flex;
       flex-wrap: wrap;
-      gap: 6px;
-      margin-top: 18px;
+      gap: 10px;
+      margin-top: 26px;
     }
 
     .tag {
-      font-size: 12px;
-      padding: 3px 11px;
-      border-radius: 20px;
-      border: 1px solid var(--border);
-      color: var(--muted);
-      background: #fff;
+      font-size: 13px;
+      padding: 6px 14px;
+      border-radius: 999px;
+      border: 1px solid #d6e1ec;
+      color: #3f5877;
+      background: rgba(255, 255, 255, 0.82);
     }
 
     .links {
       display: flex;
       flex-wrap: wrap;
-      gap: 8px;
-      margin-top: 24px;
+      gap: 10px;
+      margin-top: 30px;
     }
 
     .links a {
       display: inline-flex;
       align-items: center;
-      gap: 6px;
-      font-size: 13px;
-      font-weight: 500;
+      gap: 8px;
+      font-size: 14px;
+      font-weight: 600;
       color: var(--navy);
-      background: var(--navy-light);
-      border: 1px solid #c5d5e8;
-      padding: 6px 15px;
-      border-radius: 6px;
+      background: #fff;
+      border: 1px solid #ccdae9;
+      padding: 9px 16px;
+      border-radius: 999px;
       text-decoration: none;
-      transition: background 0.15s;
+      box-shadow: 0 8px 20px rgba(24, 49, 83, 0.06);
+      transition: transform 0.18s ease, border-color 0.18s ease, background 0.18s ease;
     }
 
     .links a:hover {
-      background: #d6e4f0;
+      transform: translateY(-2px);
+      border-color: #9db7d4;
+      background: #f7fbff;
     }
 
     .hero-photo {
-      flex-shrink: 0;
-      width: 200px;
-      height: 200px;
-      border-radius: 50%;
+      width: 300px;
+      height: 300px;
+      border-radius: 32px;
       overflow: hidden;
-      border: 1px solid var(--border);
-      background: var(--navy-light);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-top: -6px;
+      border: 1px solid rgba(219, 228, 238, 0.9);
+      background: linear-gradient(180deg, #eef4fb 0%, #dde8f5 100%);
+      box-shadow: var(--shadow);
+      justify-self: end;
     }
 
     .hero-photo img {
@@ -193,174 +201,321 @@
     }
 
     section {
-      margin-bottom: 64px;
+      margin-bottom: 84px;
     }
 
     .sh {
       display: flex;
       align-items: center;
-      gap: 14px;
-      margin-bottom: 28px;
+      gap: 18px;
+      margin-bottom: 30px;
     }
 
     h2 {
-      font-size: 22px;
-      font-weight: 700;
+      font-size: 30px;
+      font-weight: 800;
       white-space: nowrap;
-      letter-spacing: -0.01em;
+      letter-spacing: -0.03em;
+      color: var(--navy);
     }
 
     .sh-line {
       flex: 1;
       height: 1px;
-      background: var(--border);
+      background: linear-gradient(90deg, rgba(24, 49, 83, 0.18) 0%, rgba(24, 49, 83, 0.02) 100%);
     }
 
-    .pub {
-      padding: 18px 0;
-      border-bottom: 1px solid var(--border);
+    .selected-pubs {
       display: grid;
-      grid-template-columns: 22px 1fr;
-      gap: 14px;
+      gap: 24px;
     }
 
-    .pub:first-child {
-      border-top: 1px solid var(--border);
+    .pub-card {
+      display: grid;
+      grid-template-columns: minmax(260px, 360px) minmax(0, 1fr);
+      gap: 28px;
+      background: var(--card);
+      border: 1px solid rgba(214, 225, 236, 0.95);
+      border-radius: 28px;
+      padding: 26px;
+      box-shadow: var(--shadow);
+      align-items: stretch;
     }
 
-    .pub-n {
+    .pub-figure {
+      position: relative;
+      min-height: 220px;
+      border-radius: 22px;
+      overflow: hidden;
+      padding: 18px;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      isolation: isolate;
+    }
+
+    .pub-figure::before,
+    .pub-figure::after {
+      content: "";
+      position: absolute;
+      border-radius: 999px;
+      opacity: 0.32;
+      filter: blur(2px);
+      z-index: -1;
+    }
+
+    .pub-figure::before {
+      width: 220px;
+      height: 220px;
+      top: -70px;
+      right: -50px;
+      background: rgba(255, 255, 255, 0.28);
+    }
+
+    .pub-figure::after {
+      width: 180px;
+      height: 180px;
+      bottom: -70px;
+      left: -40px;
+      background: rgba(255, 255, 255, 0.18);
+    }
+
+    .pub-card--chi7t .pub-figure {
+      background:
+        radial-gradient(circle at 30% 25%, rgba(255,255,255,0.28), transparent 20%),
+        linear-gradient(135deg, #15365e 0%, #2f6698 52%, #61a5c2 100%);
+    }
+
+    .pub-card--chisepnet .pub-figure {
+      background:
+        radial-gradient(circle at 75% 25%, rgba(255,255,255,0.24), transparent 22%),
+        linear-gradient(135deg, #123c43 0%, #1b6b74 48%, #56b3a2 100%);
+    }
+
+    .pub-card--deeprf .pub-figure {
+      background:
+        radial-gradient(circle at 72% 30%, rgba(255,255,255,0.2), transparent 22%),
+        linear-gradient(135deg, #31255f 0%, #4b3f8f 48%, #8e7dff 100%);
+    }
+
+    .figure-kicker {
       font-size: 12px;
-      color: #9ca3af;
-      padding-top: 3px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      opacity: 0.82;
+    }
+
+    .figure-title {
+      font-size: 28px;
+      font-weight: 800;
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+      max-width: 240px;
+    }
+
+    .figure-caption {
+      font-size: 13px;
+      line-height: 1.55;
+      color: rgba(255, 255, 255, 0.88);
+      max-width: 250px;
+    }
+
+    .pub-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    .pub-pill {
+      display: inline-flex;
+      align-items: center;
+      border-radius: 999px;
+      padding: 5px 11px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--navy);
+      background: var(--navy-soft);
+      border: 1px solid #d6e1ec;
+    }
+
+    .pub-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
 
     .pub-title {
-      font-size: 14.5px;
-      font-weight: 600;
-      margin-bottom: 4px;
-      line-height: 1.45;
-    }
-
-    .pub-title a {
-      color: var(--text);
-      text-decoration: none;
-    }
-
-    .pub-title a:hover {
-      color: var(--navy);
+      font-size: 25px;
+      font-weight: 800;
+      line-height: 1.22;
+      letter-spacing: -0.03em;
+      margin-bottom: 12px;
+      color: var(--navy-deep);
     }
 
     .pub-authors {
-      font-size: 13px;
-      color: var(--muted);
-      margin-bottom: 3px;
+      font-size: 15.5px;
+      color: #526277;
+      margin-bottom: 10px;
     }
 
     .pub-authors strong {
-      color: var(--text);
-      font-weight: 600;
+      color: var(--navy-deep);
+      font-weight: 700;
     }
 
     .pub-venue {
-      font-size: 13px;
-      color: var(--muted);
-      margin-bottom: 8px;
+      font-size: 16px;
+      color: #405167;
+      margin-bottom: 16px;
     }
 
-    .venue {
-      font-weight: 700;
+    .pub-venue .venue {
       color: var(--navy);
-      font-style: normal;
+      font-weight: 800;
+    }
+
+    .pub-summary {
+      font-size: 16px;
+      color: #334155;
+      margin-bottom: 18px;
+    }
+
+    .pub-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
     }
 
     .pub-links a {
-      font-size: 12px;
-      color: var(--muted);
-      border: 1px solid var(--border);
-      padding: 2px 9px;
-      border-radius: 4px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--navy);
       text-decoration: none;
-      margin-right: 5px;
-      transition: color 0.15s, border-color 0.15s;
+      background: #fff;
+      border: 1px solid #c8d8e8;
+      border-radius: 999px;
+      padding: 9px 14px;
+      transition: transform 0.18s ease, border-color 0.18s ease, background 0.18s ease;
     }
 
     .pub-links a:hover {
-      color: var(--navy);
-      border-color: #c5d5e8;
+      transform: translateY(-2px);
+      border-color: #94afcd;
+      background: #f7fbff;
     }
 
-    .year-row {
-      grid-column: 1 / -1;
-      font-size: 11.5px;
-      font-weight: 700;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      color: #9ca3af;
-      padding-top: 6px;
+    .award-list {
+      display: grid;
+      gap: 14px;
     }
 
     .award {
-      display: flex;
+      display: grid;
+      grid-template-columns: 88px minmax(0, 1fr);
       gap: 20px;
-      padding: 13px 0;
-      border-bottom: 1px solid var(--border);
-      align-items: baseline;
-    }
-
-    .award:first-child {
-      border-top: 1px solid var(--border);
+      padding: 18px 20px;
+      border: 1px solid rgba(214, 225, 236, 0.95);
+      border-radius: 20px;
+      background: rgba(255, 255, 255, 0.88);
     }
 
     .award-y {
-      flex-shrink: 0;
-      width: 60px;
-      font-size: 12px;
-      color: #9ca3af;
+      font-size: 13px;
+      font-weight: 700;
+      color: #64748b;
+      padding-top: 2px;
     }
 
     .award-name {
-      font-size: 14px;
-      font-weight: 600;
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--navy-deep);
     }
 
     .award-sub {
-      font-size: 13px;
+      font-size: 15px;
       color: var(--muted);
-      margin-top: 1px;
+      margin-top: 4px;
     }
 
     footer {
-      border-top: 1px solid var(--border);
+      border-top: 1px solid rgba(214, 225, 236, 0.95);
       text-align: center;
-      padding: 28px;
-      font-size: 12.5px;
-      color: #9ca3af;
+      padding: 34px 20px;
+      font-size: 14px;
+      color: #64748b;
     }
 
-    @media (max-width: 700px) {
+    @media (max-width: 900px) {
       .hero {
-        flex-direction: column-reverse;
-        gap: 24px;
+        grid-template-columns: 1fr;
+        gap: 30px;
       }
 
       .hero-photo {
-        width: 130px;
-        height: 130px;
-        margin-top: 0;
+        justify-self: start;
+        width: 220px;
+        height: 220px;
       }
 
-      .hero-name {
-        font-size: 32px;
+      .pub-card {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 700px) {
+      body {
+        font-size: 16px;
       }
 
       .wrap {
-        padding: 48px 20px 80px;
+        padding: 54px 20px 90px;
       }
 
       .nav-inner {
         padding: 0 20px;
         overflow-x: auto;
         white-space: nowrap;
+      }
+
+      .hero-name {
+        font-size: 42px;
+      }
+
+      .hero-bio p,
+      .pub-summary {
+        font-size: 16px;
+      }
+
+      h2 {
+        font-size: 26px;
+      }
+
+      .pub-card {
+        padding: 18px;
+        border-radius: 22px;
+      }
+
+      .pub-figure {
+        min-height: 190px;
+      }
+
+      .pub-title {
+        font-size: 22px;
+      }
+
+      .award {
+        grid-template-columns: 1fr;
+        gap: 8px;
       }
     }
   </style>
@@ -371,7 +526,7 @@
   <div class="nav-inner">
     <a href="index.html" class="nav-logo">Jiye Kim</a>
     <a href="#about" class="nl active">About</a>
-    <a href="#publications" class="nl">Publications</a>
+    <a href="#publications" class="nl">Selected Publications</a>
     <a href="#awards" class="nl">Honors &amp; Awards</a>
     <a href="files/CV_JiyeKim.pdf" class="nl" target="_blank" rel="noopener noreferrer">CV</a>
   </div>
@@ -388,14 +543,13 @@
         <p>
           I am a Ph.D. candidate in the
           <a href="https://ece.snu.ac.kr/" target="_blank" rel="noopener noreferrer">Department of Electrical and Computer Engineering</a>
-          at
-          <a href="https://www.snu.ac.kr/" target="_blank" rel="noopener noreferrer">Seoul National University</a>,
-          advised by Prof. Jongho Lee.
+          at Seoul National University,
+          advised by <a href="https://list.snu.ac.kr/" target="_blank" rel="noopener noreferrer">Prof. Jongho Lee</a>.
         </p>
         <p>
           My research focuses on quantitative MRI, particularly
           <strong>Quantitative Susceptibility Mapping (QSM)</strong> and
-          <strong>χ-separation</strong>, combined with deep learning for
+          <strong>Chi-separation</strong>, combined with deep learning for
           high-resolution in-vivo brain imaging.
           I am also interested in MRI physics and RF pulse design.
         </p>
@@ -404,7 +558,7 @@
       <div class="tags">
         <span class="tag">MRI</span>
         <span class="tag">Quantitative Susceptibility Mapping</span>
-        <span class="tag">χ-separation</span>
+        <span class="tag">Chi-separation</span>
         <span class="tag">Deep Learning</span>
         <span class="tag">RF Pulse Design</span>
         <span class="tag">Neuroimaging</span>
@@ -444,75 +598,76 @@
 
   <section id="publications">
     <div class="sh">
-      <h2>Publications</h2>
+      <h2>Selected Publications</h2>
       <div class="sh-line"></div>
     </div>
-    <div>
 
-      <div class="pub"><div class="year-row">2025</div></div>
+    <div class="selected-pubs">
+      <article class="pub-card pub-card--chi7t">
+        <div class="pub-figure">
+          <div class="figure-kicker">Representative Figure</div>
+          <div class="figure-title">7T<br>Chi-separation</div>
+          <div class="figure-caption">High-resolution in-vivo susceptibility source separation for detailed visualization of brain microstructure.</div>
+        </div>
 
-      <div class="pub">
-        <div class="pub-n">1</div>
-        <div>
-          <p class="pub-title">In-vivo high-resolution χ-separation at 7T</p>
+        <div class="pub-content">
+          <div class="pub-meta">
+            <span class="pub-pill">2025</span>
+            <span class="pub-pill">NeuroImage</span>
+          </div>
+          <p class="pub-title">In-vivo high-resolution Chi-separation at 7T</p>
           <p class="pub-authors"><strong>J. Kim</strong>, M. Kim, S. Ji, K. Min, H. Jeong, H.-G. Shin, C. Oh, R. J. Fox, K. E. Sakaie, M. J. Lowe, S.-H. Oh, S. Straub, S.-G. Kim, and J. Lee</p>
           <p class="pub-venue"><span class="venue">NeuroImage</span>, 2025</p>
-          <div class="pub-links"><a href="#">Paper</a></div>
+          <p class="pub-summary">A deep-learning-powered 7T Chi-separation pipeline for resolving fine in-vivo brain structure with richer iron and myelin contrast.</p>
+          <div class="pub-links">
+            <a href="https://www.sciencedirect.com/science/article/pii/S105381192500062X" target="_blank" rel="noopener noreferrer">Paper Link</a>
+          </div>
         </div>
-      </div>
+      </article>
 
-      <div class="pub">
-        <div class="pub-n">2</div>
-        <div>
-          <p class="pub-title">χ-sepnet: Deep neural network for magnetic susceptibility source separation</p>
+      <article class="pub-card pub-card--chisepnet">
+        <div class="pub-figure">
+          <div class="figure-kicker">Representative Figure</div>
+          <div class="figure-title">Chi-sepnet</div>
+          <div class="figure-caption">Neural susceptibility source separation with improved image quality and reduced acquisition burden.</div>
+        </div>
+
+        <div class="pub-content">
+          <div class="pub-meta">
+            <span class="pub-pill">2025</span>
+            <span class="pub-pill">Human Brain Mapping</span>
+          </div>
+          <p class="pub-title">Chi-sepnet: Deep neural network for magnetic susceptibility source separation</p>
           <p class="pub-authors">M. Kim, S. Ji, <strong>J. Kim</strong>, K. Min, H. Jeong, J. Youn, T. Kim, J. Jang, B. Bilgic, H.-G. Shin, and J. Lee</p>
           <p class="pub-venue"><span class="venue">Human Brain Mapping</span>, 2025</p>
-          <div class="pub-links"><a href="#">Paper</a></div>
+          <p class="pub-summary">A learning-based Chi-separation framework that reconstructs paramagnetic and diamagnetic maps with fewer artifacts and broader practical usability.</p>
+          <div class="pub-links">
+            <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11748151/" target="_blank" rel="noopener noreferrer">Paper Link</a>
+          </div>
         </div>
-      </div>
+      </article>
 
-      <div class="pub">
-        <div class="pub-n">3</div>
-        <div>
-          <p class="pub-title">Vessel segmentation for χ-separation</p>
-          <p class="pub-authors">T. Kim, S. Ji, K. Min, M. Kim, J. Youn, C. Oh, <strong>J. Kim</strong>, and J. Lee</p>
-          <p class="pub-venue"><span class="venue">Magnetic Resonance in Medicine</span>, 2025</p>
-          <div class="pub-links"><a href="#">Paper</a></div>
+      <article class="pub-card pub-card--deeprf">
+        <div class="pub-figure">
+          <div class="figure-kicker">Representative Figure</div>
+          <div class="figure-title">DeepRF<br>for MRI</div>
+          <div class="figure-caption">AI-driven RF waveform design that expands beyond expert-crafted pulse design heuristics.</div>
         </div>
-      </div>
 
-      <div class="pub">
-        <div class="pub-n">4</div>
-        <div>
-          <p class="pub-title">MIMOSA: Multi-parametric Imaging using Multiple-echoes with Optimized Simultaneous Acquisition for highly-efficient quantitative MRI</p>
-          <p class="pub-authors">Y. Chen, Y. Jun, A. Heydari, X. Yong, <strong>J. Kim</strong>, J. Lee, ... &amp; B. Bilgic</p>
-          <p class="pub-venue"><span class="venue">Magnetic Resonance in Medicine</span>, 2025</p>
-          <div class="pub-links"><a href="#">Paper</a></div>
-        </div>
-      </div>
-
-      <div class="pub">
-        <div class="pub-n">5</div>
-        <div>
-          <p class="pub-title">A fair comparison in deep learning based QSM reconstruction</p>
-          <p class="pub-authors">C. Oh, W. Jung, <strong>J. Kim</strong>, H. Jeong, and J. Lee</p>
-          <p class="pub-venue"><span class="venue">IEEE Access</span>, 2025</p>
-          <div class="pub-links"><a href="#">Paper</a></div>
-        </div>
-      </div>
-
-      <div class="pub"><div class="year-row">2021</div></div>
-
-      <div class="pub">
-        <div class="pub-n">6</div>
-        <div>
+        <div class="pub-content">
+          <div class="pub-meta">
+            <span class="pub-pill">2021</span>
+            <span class="pub-pill">Nature Machine Intelligence</span>
+          </div>
           <p class="pub-title">Deep Reinforcement Learning-Designed Radiofrequency Waveform in MRI</p>
           <p class="pub-authors">D. Shin, Y. Kim, C. Oh, H. An, J. Park, <strong>J. Kim</strong>, and J. Lee</p>
           <p class="pub-venue"><span class="venue">Nature Machine Intelligence</span>, 2021</p>
-          <div class="pub-links"><a href="#">Paper</a></div>
+          <p class="pub-summary">An AI-powered RF pulse design framework showing how reinforcement learning can discover efficient waveform strategies in MRI.</p>
+          <div class="pub-links">
+            <a href="https://www.nature.com/articles/s42256-021-00411-1" target="_blank" rel="noopener noreferrer">Paper Link</a>
+          </div>
         </div>
-      </div>
-
+      </article>
     </div>
   </section>
 
@@ -521,35 +676,40 @@
       <h2>Honors &amp; Awards</h2>
       <div class="sh-line"></div>
     </div>
-    <div>
+
+    <div class="award-list">
       <div class="award">
         <div class="award-y">2025</div>
         <div>
           <div class="award-name">ISMRM Magna Cum Laude Merit Award</div>
-          <div class="award-sub">"Visualization of in-vivo brainstem myeloarchitecture via χ-separation at 7T"</div>
+          <div class="award-sub">"Visualization of in-vivo brainstem myeloarchitecture via Chi-separation at 7T"</div>
         </div>
       </div>
+
       <div class="award">
         <div class="award-y">2023</div>
         <div>
-          <div class="award-name">Best Trainee Scientific Awards — Poster Grand Prix</div>
+          <div class="award-name">Best Trainee Scientific Awards - Poster Grand Prix</div>
           <div class="award-sub">International Congress on MRI &amp; Annual Scientific Meeting of KSMRM</div>
         </div>
       </div>
+
       <div class="award">
         <div class="award-y">2022</div>
         <div>
-          <div class="award-name">Best Trainee Scientific Awards — Poster Gold</div>
+          <div class="award-name">Best Trainee Scientific Awards - Poster Gold</div>
           <div class="award-sub">International Congress on MRI &amp; Annual Scientific Meeting of KSMRM</div>
         </div>
       </div>
+
       <div class="award">
         <div class="award-y">2021</div>
         <div>
-          <div class="award-name">Best Trainee Scientific Awards — Oral 2nd Prize</div>
+          <div class="award-name">Best Trainee Scientific Awards - Oral 2nd Prize</div>
           <div class="award-sub">International Congress on MRI &amp; Annual Scientific Meeting of KSMRM</div>
         </div>
       </div>
+
       <div class="award">
         <div class="award-y">2021</div>
         <div>
@@ -557,6 +717,7 @@
           <div class="award-sub">The Joint Conference of the IBEC and the ICBHI</div>
         </div>
       </div>
+
       <div class="award">
         <div class="award-y">2019</div>
         <div>
@@ -564,8 +725,9 @@
           <div class="award-sub">Mirae Asset Park Hyeon Joo Foundation</div>
         </div>
       </div>
+
       <div class="award">
-        <div class="award-y">2018–19</div>
+        <div class="award-y">2018-19</div>
         <div>
           <div class="award-name">Academic Excellence Scholarship</div>
           <div class="award-sub">Seoul National University</div>
@@ -577,7 +739,7 @@
 </div>
 
 <footer>
-  <p>Jiye Kim · Seoul National University · Updated April 2026</p>
+  <p>Jiye Kim | Seoul National University | Updated April 2026</p>
 </footer>
 
 <script>
@@ -589,7 +751,7 @@
 
     ids.forEach(id => {
       const el = document.getElementById(id);
-      if (el && window.scrollY >= el.offsetTop - 70) cur = id;
+      if (el && window.scrollY >= el.offsetTop - 90) cur = id;
     });
 
     links.forEach(a => {

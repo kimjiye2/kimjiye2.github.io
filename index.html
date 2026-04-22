@@ -211,7 +211,7 @@
     }
 
     .pub-figure {
-      min-height: 220px;
+      height: 220px;
       border-radius: 12px;
       overflow: hidden;
       border: 1px solid rgba(214, 225, 236, 0.95);
@@ -233,27 +233,6 @@
       color: var(--muted);
       font-size: 14px;
       text-align: center;
-    }
-
-    .pub-meta {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-bottom: 14px;
-    }
-
-    .pub-pill {
-      display: inline-flex;
-      align-items: center;
-      border-radius: 999px;
-      padding: 5px 11px;
-      font-size: 12px;
-      font-weight: 700;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-      color: var(--navy);
-      background: var(--navy-soft);
-      border: 1px solid #d6e1ec;
     }
 
     .pub-content {
@@ -300,24 +279,16 @@
     }
 
     .pub-links a {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
       font-size: 14px;
-      font-weight: 700;
+      font-weight: 500;
       color: var(--navy);
-      text-decoration: none;
-      background: #fff;
-      border: 1px solid #c8d8e8;
-      border-radius: 999px;
-      padding: 9px 14px;
-      transition: transform 0.18s ease, border-color 0.18s ease, background 0.18s ease;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      transition: color 0.18s ease;
     }
 
     .pub-links a:hover {
-      transform: translateY(-2px);
-      border-color: #94afcd;
-      background: #f7fbff;
+      color: #2563eb;
     }
 
     .award-list {
@@ -407,7 +378,7 @@
       }
 
       .pub-figure {
-        min-height: 190px;
+        height: 190px;
       }
 
       .pub-title {
@@ -477,15 +448,11 @@
         </div>
 
         <div class="pub-content">
-          <div class="pub-meta">
-            <span class="pub-pill">2025</span>
-            <span class="pub-pill">NeuroImage</span>
-          </div>
           <p class="pub-title">In-vivo high-resolution Chi-separation at 7T</p>
           <p class="pub-authors"><strong>J. Kim</strong>, M. Kim, S. Ji, K. Min, H. Jeong, H.-G. Shin, C. Oh, R. J. Fox, K. E. Sakaie, M. J. Lowe, S.-H. Oh, S. Straub, S.-G. Kim, and J. Lee</p>
           <p class="pub-venue"><span class="venue">NeuroImage</span>, 2025</p>
           <div class="pub-links">
-            <a href="https://www.sciencedirect.com/science/article/pii/S105381192500062X" target="_blank" rel="noopener noreferrer">Paper Link</a>
+            <a href="https://www.sciencedirect.com/science/article/pii/S105381192500062X" target="_blank" rel="noopener noreferrer">Paper</a>
           </div>
         </div>
       </article>
@@ -496,53 +463,41 @@
         </div>
 
         <div class="pub-content">
-          <div class="pub-meta">
-            <span class="pub-pill">2025</span>
-            <span class="pub-pill">Human Brain Mapping</span>
-          </div>
           <p class="pub-title">Chi-sepnet: Deep neural network for magnetic susceptibility source separation</p>
           <p class="pub-authors">M. Kim, S. Ji, <strong>J. Kim</strong>, K. Min, H. Jeong, J. Youn, T. Kim, J. Jang, B. Bilgic, H.-G. Shin, and J. Lee</p>
           <p class="pub-venue"><span class="venue">Human Brain Mapping</span>, 2025</p>
           <div class="pub-links">
-            <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11748151/" target="_blank" rel="noopener noreferrer">Paper Link</a>
+            <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11748151/" target="_blank" rel="noopener noreferrer">Paper</a>
           </div>
         </div>
       </article>
 
       <article class="pub-card pub-card--deeprf">
-        <div class="pub-figure pub-figure--empty">
-          <span>Representative figure</span>
+        <div class="pub-figure">
+          <img src="files/deeprf.png" alt="Representative figure for Deep Reinforcement Learning-Designed Radiofrequency Waveform in MRI">
         </div>
 
         <div class="pub-content">
-          <div class="pub-meta">
-            <span class="pub-pill">2021</span>
-            <span class="pub-pill">Nature Machine Intelligence</span>
-          </div>
           <p class="pub-title">Deep Reinforcement Learning-Designed Radiofrequency Waveform in MRI</p>
           <p class="pub-authors">D. Shin, Y. Kim, C. Oh, H. An, J. Park, <strong>J. Kim</strong>, and J. Lee</p>
           <p class="pub-venue"><span class="venue">Nature Machine Intelligence</span>, 2021</p>
           <div class="pub-links">
-            <a href="https://www.nature.com/articles/s42256-021-00411-1" target="_blank" rel="noopener noreferrer">Paper Link</a>
+            <a href="https://www.nature.com/articles/s42256-021-00411-1" target="_blank" rel="noopener noreferrer">Paper</a>
           </div>
         </div>
       </article>
 
       <article class="pub-card">
-        <div class="pub-figure pub-figure--empty">
-          <span>Representative figure</span>
+        <div class="pub-figure">
+          <img src="files/mimosa.jpg" alt="Representative figure for MIMOSA">
         </div>
 
         <div class="pub-content">
-          <div class="pub-meta">
-            <span class="pub-pill">2026</span>
-            <span class="pub-pill">Magnetic Resonance in Medicine</span>
-          </div>
           <p class="pub-title">MIMOSA: Multi-parametric Imaging using Multiple-echoes with Optimized Simultaneous Acquisition for highly-efficient quantitative MRI</p>
           <p class="pub-authors">Y. Chen, Y. Jun, A. Heydari, X. Yong, <strong>J. Kim</strong>, J. Lee, H. Liu, H. Ye, B. Gagoski, S. Fujita, and B. Bilgic</p>
           <p class="pub-venue"><span class="venue">Magnetic Resonance in Medicine</span>, 2026</p>
           <div class="pub-links">
-            <a href="https://doi.org/10.1002/mrm.70143" target="_blank" rel="noopener noreferrer">Paper Link</a>
+            <a href="https://doi.org/10.1002/mrm.70143" target="_blank" rel="noopener noreferrer">Paper</a>
           </div>
         </div>
       </article>

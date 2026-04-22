@@ -27,159 +27,317 @@
     }
 
     nav {
-      position: sticky; top: 0; z-index: 100;
+      position: sticky;
+      top: 0;
+      z-index: 100;
       background: rgba(255,255,255,0.95);
       backdrop-filter: blur(8px);
       border-bottom: 1px solid var(--border);
     }
     .nav-inner {
-      max-width: 780px; margin: 0 auto;
-      padding: 0 32px; height: 54px;
-      display: flex; align-items: center; gap: 2px;
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 0 32px;
+      height: 54px;
+      display: flex;
+      align-items: center;
+      gap: 2px;
     }
     .nav-logo {
       font-family: 'Source Serif 4', serif;
-      font-size: 17px; font-weight: 400;
-      color: var(--text); text-decoration: none;
+      font-size: 17px;
+      font-weight: 400;
+      color: var(--text);
+      text-decoration: none;
       margin-right: auto;
     }
     nav a.nl {
-      font-size: 13.5px; color: var(--muted);
-      text-decoration: none; padding: 5px 13px;
+      font-size: 13.5px;
+      color: var(--muted);
+      text-decoration: none;
+      padding: 5px 13px;
       border-radius: 5px;
       transition: color 0.15s, background 0.15s;
     }
-    nav a.nl:hover, nav a.nl.active {
-      color: var(--navy); background: var(--navy-light);
+    nav a.nl:hover,
+    nav a.nl.active {
+      color: var(--navy);
+      background: var(--navy-light);
     }
 
     .wrap {
-      max-width: 780px; margin: 0 auto;
+      max-width: 780px;
+      margin: 0 auto;
       padding: 64px 32px 100px;
     }
 
     .hero {
-      display: flex; gap: 48px;
+      display: flex;
+      gap: 48px;
       align-items: flex-start;
       margin-bottom: 72px;
     }
     .hero-text { flex: 1; }
     .hero-name {
       font-family: 'Source Serif 4', serif;
-      font-size: 42px; font-weight: 300;
-      letter-spacing: -0.02em; line-height: 1.1;
+      font-size: 42px;
+      font-weight: 300;
+      letter-spacing: -0.02em;
+      line-height: 1.1;
       margin-bottom: 6px;
     }
     .hero-sub {
-      font-size: 13px; color: var(--muted);
-      font-weight: 300; letter-spacing: 0.05em;
-      text-transform: uppercase; margin-bottom: 22px;
+      font-size: 13px;
+      color: var(--muted);
+      font-weight: 300;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 22px;
     }
     .hero-bio p {
-      color: #374151; font-size: 14.5px;
-      margin-bottom: 13px; max-width: 500px;
+      color: #374151;
+      font-size: 14.5px;
+      margin-bottom: 13px;
+      max-width: 500px;
     }
-    .hero-bio a { color: var(--navy); text-decoration: none; }
-    .hero-bio a:hover { text-decoration: underline; }
+    .hero-bio a {
+      color: var(--navy);
+      text-decoration: none;
+    }
+    .hero-bio a:hover {
+      text-decoration: underline;
+    }
 
-    .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 18px; }
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 18px;
+    }
     .tag {
-      font-size: 12px; padding: 3px 11px; border-radius: 20px;
-      border: 1px solid var(--border); color: var(--muted); background: #fff;
+      font-size: 12px;
+      padding: 3px 11px;
+      border-radius: 20px;
+      border: 1px solid var(--border);
+      color: var(--muted);
+      background: #fff;
     }
 
-    .links { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 24px; }
-    .links a {
-      display: inline-flex; align-items: center; gap: 6px;
-      font-size: 13px; font-weight: 500;
-      color: var(--navy); background: var(--navy-light);
-      border: 1px solid #c5d5e8;
-      padding: 6px 15px; border-radius: 6px;
-      text-decoration: none; transition: background 0.15s;
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 24px;
     }
-    .links a:hover { background: #d6e4f0; }
+    .links a {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--navy);
+      background: var(--navy-light);
+      border: 1px solid #c5d5e8;
+      padding: 6px 15px;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: background 0.15s;
+    }
+    .links a:hover {
+      background: #d6e4f0;
+    }
 
     .hero-photo {
-      flex-shrink: 0; width: 148px; height: 148px;
-      border-radius: 10px; overflow: hidden;
+      flex-shrink: 0;
+      width: 148px;
+      height: 148px;
+      border-radius: 10px;
+      overflow: hidden;
       border: 1px solid var(--border);
       background: var(--navy-light);
-      display: flex; align-items: center; justify-content: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
-    .hero-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .hero-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
 
     section { margin-bottom: 64px; }
     .sh {
-      display: flex; align-items: center; gap: 14px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
       margin-bottom: 28px;
     }
     h2 {
       font-family: 'Source Serif 4', serif;
-      font-size: 22px; font-weight: 400;
-      white-space: nowrap; letter-spacing: -0.01em;
+      font-size: 22px;
+      font-weight: 400;
+      white-space: nowrap;
+      letter-spacing: -0.01em;
     }
-    .sh-line { flex: 1; height: 1px; background: var(--border); }
+    .sh-line {
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
 
     .pub {
-      padding: 18px 0; border-bottom: 1px solid var(--border);
-      display: grid; grid-template-columns: 22px 1fr; gap: 14px;
+      padding: 18px 0;
+      border-bottom: 1px solid var(--border);
+      display: grid;
+      grid-template-columns: 22px 1fr;
+      gap: 14px;
     }
     .pub:first-child { border-top: 1px solid var(--border); }
-    .pub-n { font-size: 12px; color: #9ca3af; padding-top: 3px; }
-    .pub-title { font-size: 14.5px; font-weight: 500; margin-bottom: 4px; line-height: 1.45; }
-    .pub-title a { color: var(--text); text-decoration: none; }
-    .pub-title a:hover { color: var(--navy); }
-    .pub-authors { font-size: 13px; color: var(--muted); margin-bottom: 3px; }
-    .pub-authors strong { color: var(--text); font-weight: 500; }
-    .pub-venue { font-size: 13px; color: var(--muted); margin-bottom: 8px; }
-    .venue { font-weight: 600; color: var(--navy); font-style: normal; }
+    .pub-n {
+      font-size: 12px;
+      color: #9ca3af;
+      padding-top: 3px;
+    }
+    .pub-title {
+      font-size: 14.5px;
+      font-weight: 500;
+      margin-bottom: 4px;
+      line-height: 1.45;
+    }
+    .pub-title a {
+      color: var(--text);
+      text-decoration: none;
+    }
+    .pub-title a:hover {
+      color: var(--navy);
+    }
+    .pub-authors {
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 3px;
+    }
+    .pub-authors strong {
+      color: var(--text);
+      font-weight: 500;
+    }
+    .pub-venue {
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 8px;
+    }
+    .venue {
+      font-weight: 600;
+      color: var(--navy);
+      font-style: normal;
+    }
     .pub-links a {
-      font-size: 12px; color: var(--muted);
-      border: 1px solid var(--border); padding: 2px 9px;
-      border-radius: 4px; text-decoration: none; margin-right: 5px;
+      font-size: 12px;
+      color: var(--muted);
+      border: 1px solid var(--border);
+      padding: 2px 9px;
+      border-radius: 4px;
+      text-decoration: none;
+      margin-right: 5px;
       transition: color 0.15s, border-color 0.15s;
     }
-    .pub-links a:hover { color: var(--navy); border-color: #c5d5e8; }
+    .pub-links a:hover {
+      color: var(--navy);
+      border-color: #c5d5e8;
+    }
     .year-row {
-      grid-column: 1/-1; font-size: 11.5px; font-weight: 500;
-      letter-spacing: 0.06em; text-transform: uppercase;
-      color: #9ca3af; padding-top: 6px;
+      grid-column: 1 / -1;
+      font-size: 11.5px;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: #9ca3af;
+      padding-top: 6px;
     }
 
     .award {
-      display: flex; gap: 20px; padding: 13px 0;
-      border-bottom: 1px solid var(--border); align-items: baseline;
+      display: flex;
+      gap: 20px;
+      padding: 13px 0;
+      border-bottom: 1px solid var(--border);
+      align-items: baseline;
     }
     .award:first-child { border-top: 1px solid var(--border); }
-    .award-y { flex-shrink: 0; width: 44px; font-size: 12px; color: #9ca3af; }
-    .award-name { font-size: 14px; font-weight: 500; }
-    .award-sub { font-size: 13px; color: var(--muted); margin-top: 1px; }
+    .award-y {
+      flex-shrink: 0;
+      width: 60px;
+      font-size: 12px;
+      color: #9ca3af;
+    }
+    .award-name {
+      font-size: 14px;
+      font-weight: 500;
+    }
+    .award-sub {
+      font-size: 13px;
+      color: var(--muted);
+      margin-top: 1px;
+    }
 
-    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
     .cc {
-      background: #fff; border: 1px solid var(--border);
-      border-radius: 8px; padding: 16px 20px;
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px 20px;
     }
     .cc-label {
-      font-size: 11px; font-weight: 500; text-transform: uppercase;
-      letter-spacing: 0.08em; color: #9ca3af; margin-bottom: 5px;
+      font-size: 11px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #9ca3af;
+      margin-bottom: 5px;
     }
-    .cc-val { font-size: 14px; }
-    .cc-val a { color: var(--navy); text-decoration: none; }
-    .cc-val a:hover { text-decoration: underline; }
+    .cc-val {
+      font-size: 14px;
+    }
+    .cc-val a {
+      color: var(--navy);
+      text-decoration: none;
+    }
+    .cc-val a:hover {
+      text-decoration: underline;
+    }
 
     footer {
-      border-top: 1px solid var(--border); text-align: center;
-      padding: 28px; font-size: 12.5px; color: #9ca3af;
+      border-top: 1px solid var(--border);
+      text-align: center;
+      padding: 28px;
+      font-size: 12.5px;
+      color: #9ca3af;
     }
 
     @media (max-width: 600px) {
-      .hero { flex-direction: column-reverse; gap: 24px; }
-      .hero-photo { width: 96px; height: 96px; }
-      .hero-name { font-size: 32px; }
-      .contact-grid { grid-template-columns: 1fr; }
-      .wrap { padding: 48px 20px 80px; }
-      .nav-inner { padding: 0 20px; }
+      .hero {
+        flex-direction: column-reverse;
+        gap: 24px;
+      }
+      .hero-photo {
+        width: 96px;
+        height: 96px;
+      }
+      .hero-name {
+        font-size: 32px;
+      }
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+      .wrap {
+        padding: 48px 20px 80px;
+      }
+      .nav-inner {
+        padding: 0 20px;
+      }
     }
   </style>
 </head>
@@ -198,7 +356,6 @@
 
 <div class="wrap">
 
-  <!-- HERO -->
   <div class="hero" id="about">
     <div class="hero-text">
       <p class="hero-name">Jiye Kim</p>
@@ -206,8 +363,9 @@
       <div class="hero-bio">
         <p>
           I am a Ph.D. candidate in the
-          <a href="https://ece.snu.ac.kr/">Department of Electrical and Computer Engineering</a>
-          at <a href="https://www.snu.ac.kr/">Seoul National University</a>,
+          <a href="https://ece.snu.ac.kr/" target="_blank" rel="noopener noreferrer">Department of Electrical and Computer Engineering</a>
+          at
+          <a href="https://www.snu.ac.kr/" target="_blank" rel="noopener noreferrer">Seoul National University</a>,
           advised by Prof. Jongho Lee.
         </p>
         <p>
@@ -218,6 +376,7 @@
           I am also interested in MRI physics and RF pulse design.
         </p>
       </div>
+
       <div class="tags">
         <span class="tag">MRI</span>
         <span class="tag">Quantitative Susceptibility Mapping</span>
@@ -226,33 +385,42 @@
         <span class="tag">RF Pulse Design</span>
         <span class="tag">Neuroimaging</span>
       </div>
+
       <div class="links">
         <a href="mailto:lool1015@snu.ac.kr">
-          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 7L2 7"/></svg>
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+            <path d="m22 7-10 7L2 7"></path>
+          </svg>
           Email
         </a>
-        <a href="https://scholar.google.com/citations?user=6HlxVcsAAAAJ&hl=en" target="_blank">
-          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+        <a href="https://scholar.google.com/citations?user=6HlxVcsAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+            <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+          </svg>
           Google Scholar
         </a>
         <a href="cv.html">
-          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+            <polyline points="14 2 14 8 20 8"></polyline>
+          </svg>
           CV
         </a>
       </div>
     </div>
 
     <div class="hero-photo">
-      <!-- 사진 올리면 주석 해제: <img src="files/photo.jpg" alt="Jiye Kim"> -->
-      <svg width="56" height="56" viewBox="0 0 24 24" fill="#1a2e4a" opacity="0.2">
-        <path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/>
-      </svg>
+      <img src="files/photo.jpg" alt="Jiye Kim">
     </div>
   </div>
 
-  <!-- PUBLICATIONS -->
   <section id="publications">
-    <div class="sh"><h2>Publications</h2><div class="sh-line"></div></div>
+    <div class="sh">
+      <h2>Publications</h2>
+      <div class="sh-line"></div>
+    </div>
     <div>
       <div class="pub"><div class="year-row">2025</div></div>
 
@@ -290,7 +458,7 @@
         <div class="pub-n">4</div>
         <div>
           <p class="pub-title">MIMOSA: Multi-parametric Imaging using Multiple-echoes with Optimized Simultaneous Acquisition for highly-efficient quantitative MRI</p>
-          <p class="pub-authors">Y. Chen, Y. Jun, A. Heydari, X. Yong, <strong>J. Kim</strong>, J. Lee, ... & B. Bilgic</p>
+          <p class="pub-authors">Y. Chen, Y. Jun, A. Heydari, X. Yong, <strong>J. Kim</strong>, J. Lee, ... &amp; B. Bilgic</p>
           <p class="pub-venue"><span class="venue">Magnetic Resonance in Medicine</span>, 2025</p>
           <div class="pub-links"><a href="#">Paper</a></div>
         </div>
@@ -320,9 +488,11 @@
     </div>
   </section>
 
-  <!-- AWARDS -->
   <section id="awards">
-    <div class="sh"><h2>Honors &amp; Awards</h2><div class="sh-line"></div></div>
+    <div class="sh">
+      <h2>Honors &amp; Awards</h2>
+      <div class="sh-line"></div>
+    </div>
     <div>
       <div class="award">
         <div class="award-y">2025</div>
@@ -335,21 +505,21 @@
         <div class="award-y">2023</div>
         <div>
           <div class="award-name">Best Trainee Scientific Awards — Poster Grand Prix</div>
-          <div class="award-sub">International Congress on MRI & Annual Scientific Meeting of KSMRM</div>
+          <div class="award-sub">International Congress on MRI &amp; Annual Scientific Meeting of KSMRM</div>
         </div>
       </div>
       <div class="award">
         <div class="award-y">2022</div>
         <div>
           <div class="award-name">Best Trainee Scientific Awards — Poster Gold</div>
-          <div class="award-sub">International Congress on MRI & Annual Scientific Meeting of KSMRM</div>
+          <div class="award-sub">International Congress on MRI &amp; Annual Scientific Meeting of KSMRM</div>
         </div>
       </div>
       <div class="award">
         <div class="award-y">2021</div>
         <div>
           <div class="award-name">Best Trainee Scientific Awards — Oral 2nd Prize</div>
-          <div class="award-sub">International Congress on MRI & Annual Scientific Meeting of KSMRM</div>
+          <div class="award-sub">International Congress on MRI &amp; Annual Scientific Meeting of KSMRM</div>
         </div>
       </div>
       <div class="award">
@@ -376,9 +546,11 @@
     </div>
   </section>
 
-  <!-- CONTACT -->
   <section id="contact">
-    <div class="sh"><h2>Contact</h2><div class="sh-line"></div></div>
+    <div class="sh">
+      <h2>Contact</h2>
+      <div class="sh-line"></div>
+    </div>
     <div class="contact-grid">
       <div class="cc">
         <div class="cc-label">Email</div>
@@ -390,7 +562,7 @@
       </div>
       <div class="cc">
         <div class="cc-label">Google Scholar</div>
-        <div class="cc-val"><a href="https://scholar.google.com/citations?user=6HlxVcsAAAAJ&hl=en" target="_blank">View Profile →</a></div>
+        <div class="cc-val"><a href="https://scholar.google.com/citations?user=6HlxVcsAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">View Profile →</a></div>
       </div>
       <div class="cc">
         <div class="cc-label">Phone</div>
@@ -402,20 +574,27 @@
 </div>
 
 <footer>
-  <p>Jiye Kim &nbsp;·&nbsp; Seoul National University &nbsp;·&nbsp; Updated October 2025</p>
+  <p>Jiye Kim &nbsp;·&nbsp; Seoul National University &nbsp;·&nbsp; Updated April 2026</p>
 </footer>
 
 <script>
   const links = document.querySelectorAll('nav a.nl');
-  const ids = ['about','publications','awards','contact'];
+  const ids = ['about', 'publications', 'awards', 'contact'];
+
   window.addEventListener('scroll', () => {
     let cur = 'about';
     ids.forEach(id => {
       const el = document.getElementById(id);
       if (el && window.scrollY >= el.offsetTop - 70) cur = id;
     });
+
     links.forEach(a => {
-      const h = a.getAttribute('href').replace('#','');
+      const href = a.getAttribute('href');
+      if (!href.startsWith('#')) {
+        a.classList.remove('active');
+        return;
+      }
+      const h = href.replace('#', '');
       a.classList.toggle('active', h === cur);
     });
   });

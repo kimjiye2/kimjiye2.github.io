@@ -236,6 +236,7 @@
       overflow: hidden;
       background: #ffffff;
       padding: 12px;
+      cursor: zoom-in;
     }
 
     .pub-figure img {
@@ -244,6 +245,60 @@
       object-fit: contain;
       display: block;
       background: #fffdf9;
+    }
+
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      z-index: 1000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 28px;
+      background: rgba(25, 18, 15, 0.82);
+    }
+
+    .lightbox.is-open {
+      display: flex;
+    }
+
+    .lightbox-inner {
+      position: relative;
+      max-width: min(1200px, 92vw);
+      max-height: 90vh;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .lightbox img {
+      max-width: 100%;
+      max-height: 90vh;
+      width: auto;
+      height: auto;
+      display: block;
+      background: #ffffff;
+      border-radius: 10px;
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: -14px;
+      right: -14px;
+      width: 40px;
+      height: 40px;
+      border: 0;
+      border-radius: 999px;
+      background: #ffffff;
+      color: var(--navy-deep);
+      font-size: 24px;
+      line-height: 1;
+      cursor: pointer;
+    }
+
+    .lightbox-close:hover {
+      background: #f5eee7;
     }
 
     .pub-card--chi7t .pub-figure {
@@ -614,9 +669,56 @@
   <p>Jiye Kim | Seoul National University | Updated April 2026</p>
 </footer>
 
+<div class="lightbox" id="lightbox" aria-hidden="true">
+  <div class="lightbox-inner">
+    <button class="lightbox-close" id="lightbox-close" aria-label="Close image">×</button>
+    <img id="lightbox-image" src="" alt="">
+  </div>
+</div>
+
 <script>
   const links = document.querySelectorAll('nav a.nl');
   const ids = ['about', 'publications', 'awards'];
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImage = document.getElementById('lightbox-image');
+  const lightboxClose = document.getElementById('lightbox-close');
+  const pubFigures = document.querySelectorAll('.pub-figure img');
+
+  function openLightbox(src, alt) {
+    lightboxImage.src = src;
+    lightboxImage.alt = alt || '';
+    lightbox.classList.add('is-open');
+    lightbox.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeLightbox() {
+    lightbox.classList.remove('is-open');
+    lightbox.setAttribute('aria-hidden', 'true');
+    lightboxImage.src = '';
+    lightboxImage.alt = '';
+    document.body.style.overflow = '';
+  }
+
+  pubFigures.forEach(img => {
+    img.addEventListener('click', () => {
+      openLightbox(img.src, img.alt);
+    });
+  });
+
+  lightboxClose.addEventListener('click', closeLightbox);
+
+  lightbox.addEventListener('click', (event) => {
+    if (event.target === lightbox) {
+      closeLightbox();
+    }
+  });
+
+  window.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && lightbox.classList.contains('is-open')) {
+      closeLightbox();
+    }
+  });
 
   window.addEventListener('scroll', () => {
     let cur = 'about';
